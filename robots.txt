@@ -1,9 +1,13 @@
 User-agent: *
+Disallow: /.git/
+Disallow: /.vscode/
 Disallow: /favicon/
 Disallow: /images/
 Disallow: /scripts/
 Disallow: /style/
+Disallow: /*.md
 Disallow: /404.xml
-Disallow: /template.html
+Disallow: /LICENSE
 Disallow: /sitemap.txt
 Disallow: /sitemap-xml.xml
+Disallow: /template.html
