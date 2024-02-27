@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /favicon/
+Disallow: /images/
+Disallow: /scripts/
+Disallow: /style/
+Disallow: /404.xml
+Disallow: /template.html
+Disallow: /sitemap.txt
+Disallow: /sitemap-xml.xml

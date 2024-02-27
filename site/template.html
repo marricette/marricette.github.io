@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="canonical" href="https://marricette.github.io/archive/template.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Template per ricetta.">
+
+  <meta property="og:title" content="Template - marricette">
+  <meta property="twitter:title" content="Template - marricette">
+  <meta property="og:description" content="Template per ricetta.">
+  <meta property="twitter:description" content="Template per ricetta.">
+  <meta property="og:url" content="https://marricette.github.io">
+  <meta name="twitter:card" content="summary">
+
+  <meta name="theme-color" content="#F8F9FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18191A" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/style/ricetta.css">
+  <title>TITLE - marricette</title>
+</head>
+
+<body>
+  <header id="banner">
+    <h1 translate="no">marricette</h1>
+    <nav>
+      <a lang="en" class="navbar-item" href="/">Home</a>
+      <a lang="en" class="navbar-item" href="/info/">Info</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <article>
+      <h1 class="page-title">TITLE</h1>
+      <h2>Ingredienti</h2>
+      <ul>
+        <li><span class="qt">40ml</span> succo d'arancia</li>
+        <li><span class="qt">1</span> fetta d'arancia <i>(opt)</i></li>
+      </ul>
+
+      <h2>Preparazione</h2>
+      <p>In the ingredients list, <i>(opt)</i> significa opzionale. I numeri per le quantità sono monospace e surrounded
+      da <code style="font-weight: bold;">&lt;span class="qt"&gt;40ml&lt;span&gt;</code>.<br>
+      I nomi degli ingredienti, invece, <code style="font-weight: bold;">&lt;span class="ingr"&gt;arancia&lt;/span&gt;</code> — solo in questi
+      paragrafi, per renderli bold.<br>
+      Qua sotto ci metto la foto:</p>
+
+      <div class="img-div">
+        <img src="/images/image.webp" alt="img_bella" style="width:500px;height:500px;" loading="lazy">
+        <figcaption>didascalia</figcaption>
+      </div>
+
+      <h2>Varianti</h2>
+      <p>Some additional options for variants.</p>
+
+      <h2>Note</h2>
+      <p>Additional notes on preparation, ingredients, ...</p>
+    </article>
+  </main>
+
+  <footer>
+    <hr>
+    <p><a href="" onclick="document.querySelector('h1').scrollIntoView();">↑ Back to Top</a></p>
+    <p><span translate="no">© 2024 marricette</span></p>
+  </footer>
+</body>
+
+</html>
