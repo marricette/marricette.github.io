@@ -1,5 +1,8 @@
 [commit]
-    gpgsign = false
+	gpgsign = true
 [user]
-    name = marricette
-    email = marricette@proton.me
+	name = marricette
+	email = marricette@proton.me
+	signingkey = /home/marco/.ssh/github-marricette.pub
+[gpg]
+	format = ssh
