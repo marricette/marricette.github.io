@@ -132,13 +132,13 @@ header#banner nav a#navbar-curr-page {
 a {
   cursor: pointer;
   color: var(--color-accent);
-  text-decoration: none;
+  text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 
 a:visited {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover,
@@ -178,7 +178,7 @@ details summary {
 summary *:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 /* Make summary title appear in the same line of the toggle button. */
 details summary>* {
