@@ -6,6 +6,8 @@ Disallow: /images/
 Disallow: /scripts/
 Disallow: /style/
 Disallow: /*.md
+Disallow: /.gitconfig
+Disallow: /.gitignore
 Disallow: /404.xml
 Disallow: /LICENSE
 Disallow: /sitemap.txt

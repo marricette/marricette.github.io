@@ -1,29 +1,40 @@
 /* ***** VARIABLES ***** */
 :root {
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --image-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+  --icon-search: url("/images/icon-search-light.svg");
   --color-background: #F8F9FA;
   --color-text: #212529;
   --color-text2: #616C75;
   --color-text2-underline: #616C75AA;
-  --color-accent: #0075C4;
+  --color-placeholder: #A3ACB5;
+  --color-accent: #076ED5;
   --color-grey: #6C757D;
   --color-hr: #DEE2E6;
   --color-footer-hr: #A3ACB5;
-  --image-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
-  --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --font-monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --color-sticky-title-underline: #DEE2E6;
+  --color-note-border: #DEE2E6;
+  --color-code-fg: #2F3337;
+  --color-code-bg: #F8F9FA;
 }
-/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
+    --icon-search: url("/images/icon-search-dark.svg");
     --color-background: #18191A;
     --color-text: #D0D7DE;
     --color-text2: #89949D;
     --color-text2-underline: #89949DDD;
-    --color-accent: #DF9568;
+    --color-placeholder: #89949D;
+    --color-accent: #64B1FF;
     --color-grey: #555D66;
     --color-hr: #555D66;
     --color-footer-hr: #555D66;
+    --color-sticky-title-underline: #555D6699;
+    --color-note-border: #555D6699;
+    --color-code-fg: #D0D7DE;
+    --color-code-bg: #18191A;
   }
 }
 
@@ -62,7 +73,7 @@ html {
 }
 
 body {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--color-text);
   background-color: var(--color-background);
   width: 100%;
@@ -75,10 +86,10 @@ body {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 1.75em;
 }
 main h1 {
-  font-size: 1.85em;
+  font-size: 1.9em;
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
 }
@@ -106,12 +117,16 @@ hr {
 
 /* ***** HEADER ***** */
 header#banner {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1em;
 }
 
 header#banner h1 {
   margin-top: 0.4rem;
   margin-bottom: 0;
+  color: var(--color-accent);
+}
+header#banner h1 a {
+  text-decoration: none;
 }
 
 header#banner nav a {
@@ -136,26 +151,31 @@ a {
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
-
-a:visited {
-  text-decoration: underline;
-}
-
-a:hover,
-a:focus {
-  text-decoration: underline;
-}
-
 a:active:not(#navbar-curr-page) {
   filter: brightness(80%);
 }
 
 a[target="_blank"]::after {
   /* u21aa ufe0e  second one is invisible: to avoid glyph turning into emoji */
-  content: "↪︎";
+  content: " ↪︎";
+  white-space: pre;
   display: inline-block;
-  margin-left: 0.3em;
   margin-right: 0.2em;
+}
+
+a:hover,
+a:focus,
+a[target="_blank"]:hover::after,
+a[target="_blank"]:focus::after {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:visited,
+a[target="_blank"]:visited::after {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 #navbar-curr-page {
@@ -203,6 +223,14 @@ main p.post-info + p {
   margin-top: 0;
 }
 
+::placeholder {
+  color: var(--color-placeholder);
+  opacity: 1;
+}
+::-ms-input-placeholder {
+  color: var(--color-placeholder);
+}
+
 
 /* ***** FOOTER ***** */
 /* Stretch main to fill all remaining space towards the bottom of the page. */
@@ -212,7 +240,7 @@ main {
 
 footer {
   width: 100%;
-  margin: 5.6rem 0 1.2rem;
+  margin: 4rem 0 0.5rem;
   font-size: 1.6rem;
 }
 footer hr {
@@ -247,12 +275,17 @@ footer a {
    * space occupied by browser's tabs. */
   body {
     height: 100%;
+    font-size: 1.6rem;
     min-height: 100%;
     padding: 0 2.4rem;
   }
   footer {
     margin-bottom: 0;
     padding-bottom: 1.5rem;
+  }
+
+  .fn-back {
+    font-size: 1.7rem;
   }
 }
 
